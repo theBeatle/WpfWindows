@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfMaterialDesign.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMaterialDesign"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        >
+    <Grid>
+        <md:Card Padding="32" Margin="16">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
+        </md:Card>
+        <Button 
+            Content="Button" 
+            HorizontalAlignment="Left" 
+            Margin="79,181,0,0" 
+            VerticalAlignment="Top" 
+            Width="75"
+            Style="{DynamicResource MaterialDesignFlatAccentButton}"
+            />
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="154,239,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="165,262,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="325,166,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="335,189,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="325,257,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,317,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top">bla bla</TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="325,317,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Margin="136,10,-136,-10"  Height="50" Width="100" Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}" />
+        <Slider HorizontalAlignment="Left" Margin="134,354,0,0" Minimum="10" Maximum="50" VerticalAlignment="Top"/>
+        <Menu HorizontalAlignment="Left" Height="100" Margin="134,145,0,0" VerticalAlignment="Top" Width="100"/>
+    </Grid>
+</Window>

@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shaped"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent">
+    <Canvas Width="400" Height="400" Name="RootLayout" >
+
+        <Path Stroke="Gray" StrokeThickness="2" Name="UIPath" >
+            <Path.Fill>
+                <LinearGradientBrush StartPoint="0.2,0" EndPoint="0.8,1" >
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Orange" Offset="0.15" />
+                    <GradientStop Color="Yellow"  Offset="0.30" />
+                    <GradientStop Color="Green" Offset="0.45" />
+                    <GradientStop Color="Blue" Offset="0.6" />
+                    <GradientStop Color="LightBlue" Offset="0.75" />
+                    <GradientStop Color="Violet" Offset="0.9" />
+                </LinearGradientBrush>
+            </Path.Fill>
+
+            <Path.Data>
+                <PathGeometry >
+                    <PathFigure StartPoint="50,100">
+                        <ArcSegment Size="150,150" RotationAngle="45" IsLargeArc="True"
+                                    SweepDirection="CounterClockwise" Point="100,50" />
+                        <LineSegment Point="20,20"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <Label Width="226" Height="68" FontSize="20" FontFamily="Georgia" FontWeight="Bold"
+           HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+           Canvas.Left="60" Canvas.Top="127"
+           Foreground="Black" >
+            Drag Me and Watch!
+        </Label>
+
+        <Button Canvas.Left="206" Canvas.Top="42" Height="0" Width="0"
+            ToolTip="Click me to close the form." Name="CloseButton" Click="CloseButton_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Canvas>
+                        <Rectangle Width="20" Height="20" Stroke="DarkBlue" RadiusX="10" RadiusY="10">
+                            <Rectangle.Fill>
+                                <SolidColorBrush x:Name="myAnimatedBrush" Color="Blue" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Line X1="3" Y1="3" X2="17" Y2="17" Stroke="White" StrokeThickness="2"></Line>
+                        <Line X1="17" Y1="3" X2="3" Y2="17" Stroke="White" StrokeThickness="2"></Line>
+                    </Canvas>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Canvas.Left="131" Canvas.Top="272" Height="30" Name="BlackNWhiteButton" Width="112"
+               Foreground="White" Background="Crimson" Click="BlackNWhiteButton_Click" FontWeight="Bold">
+            Black and White
+        </Button>
+    </Canvas>
 </Window>
